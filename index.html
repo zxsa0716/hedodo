@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 환갑잔치 초대장 - 최일식님 & 김나연님 🌸</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;700&display=swap');
+        
+        :root {
+            --primary-gold: #ffd700;
+            --deep-gold: #b8860b;
+            --royal-purple: #663399;
+            --elegant-rose: #ff69b4;
+            --midnight-blue: #191970;
+            --pearl-white: #f8f8ff;
+            --sunset-orange: #ff6347;
+            --emerald-green: #50c878;
+            --shadow-dark: rgba(0, 0, 0, 0.3);
+            --shadow-light: rgba(255, 255, 255, 0.8);
+            --gradient-primary: linear-gradient(135deg, #ffd700 0%, #ff6347 25%, #ff69b4 50%, #663399 75%, #191970 100%);
+            --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 248, 255, 0.9));
+            --glass-effect: backdrop-filter: blur(20px);
+            --glow-effect: 0 0 30px rgba(255, 215, 0, 0.7);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: var(--gradient-primary);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* 배경 파티클 효과 */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        .invitation-masterpiece {
+            max-width: 1600px;
+            margin: 20px auto;
+            background: var(--gradient-card);
+            var(--glass-effect);
+            border-radius: 40px;
+            box-shadow: 
+                0 40px 100px var(--shadow-dark),
+                inset 0 1px 0 var(--shadow-light);
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+            border: 3px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        /* 헤더 섹션 - 극도로 화려하게 */
+        .hero-spectacle {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #e94560 75%, #f39c12 100%);
+            background-size: 300% 300%;
+            animation: heroGradient 10s ease infinite;
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes heroGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero-spectacle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(255, 105, 180, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 50% 50%, rgba(102, 51, 153, 0.2) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        .hero-ornament {
+            font-size: 6rem;
+            margin-bottom: 30px;
+            animation: ornamentSpin 8s linear infinite;
+            position: relative;
+            z-index: 1;
+            text-shadow: var(--glow-effect);
+        }
+        
+        @keyframes ornamentSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(90deg) scale(1.1); }
+            50% { transform: rotate(180deg) scale(1); }
+            75% { transform: rotate(270deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        .hero-title {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 
+                4px 4px 8px rgba(0, 0, 0, 0.5),
+                0 0 20px var(--primary-gold),
+                0 0 40px var(--elegant-rose);
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(45deg, #ffd700, #ff69b4, #ffd700);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes textShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .hero-subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            font-weight: 700;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-year {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--midnight-blue);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 215, 0, 0.9));
+            padding: 15px 40px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 25px;
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.3),
+                inset 0 2px 0 rgba(255, 255, 255, 0.8);
+            position: relative;
+            z-index: 1;
+            transform: perspective(1000px) rotateX(10deg);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-year:hover {
+            transform: perspective(1000px) rotateX(0deg) scale(1.05);
+            box-shadow: var(--glow-effect), 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.8);
+        }
+        
+        /* 메인 대시보드 - 3D 효과 */
+        .main-universe {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 50px;
+            padding: 80px 50px;
+            background: linear-gradient(180deg, 
+                rgba(248, 248, 255, 0.9) 0%, 
+                rgba(255, 240, 245, 0.95) 25%,
+                rgba(240, 248, 255, 0.9) 50%,
+                rgba(255, 248, 240, 0.95) 75%,
+                rgba(248, 255, 248, 0.9) 100%);
+            position: relative;
+        }
+        
+        .luxury-card {
+            background: var(--gradient-card);
+            var(--glass-effect);
+            border-radius: 30px;
+            padding: 45px;
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 215, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            position: relative;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        
+        .luxury-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--elegant-rose), var(--royal-purple));
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .luxury-card:hover {
+            transform: translateY(-20px) rotateX(5deg) rotateY(2deg) scale(1.03);
+            box-shadow: 
+                0 50px 120px rgba(0, 0, 0, 0.25),
+                var(--glow-effect),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+        
+        .card-header-deluxe {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(90deg, var(--primary-gold), var(--elegant-rose)) border-box;
+        }
+        
+        .card-icon-premium {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--sunset-orange), var(--elegant-rose));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 2rem;
+            box-shadow: 
+                0 15px 35px rgba(255, 215, 0, 0.4),
+                inset 0 2px 0 rgba(255, 255, 255, 0.3);
+            animation: iconPulse 3s ease-in-out infinite;
+            transform: perspective(1000px) rotateY(-10deg);
+        }
+        
+        @keyframes iconPulse {
+            0%, 100% { transform: perspective(1000px) rotateY(-10deg) scale(1); }
+            50% { transform: perspective(1000px) rotateY(-10deg) scale(1.1); }
+        }
+        
+        .card-title-royal {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--midnight-blue);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .honoree-showcase {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 105, 180, 0.1));
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .honoree-showcase::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 3s linear infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .honoree-name-gold {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--deep-gold);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .honoree-details-elegant {
+            color: var(--royal-purple);
+            font-size: 1.2rem;
+            font-weight: 500;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .family-constellation {
+            margin-top: 20px;
+        }
+        
+        .family-member-deluxe {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 248, 255, 0.8));
+            padding: 18px 25px;
+            margin: 12px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-gold);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .family-member-deluxe::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .family-member-deluxe:hover {
+            transform: translateX(10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-left-color: var(--elegant-rose);
+        }
+        
+        .family-member-deluxe:hover::before {
+            left: 100%;
+        }
+        
+        /* 이벤트 정보 섹션 - 극도로 화려하게 */
+        .event-magnificence {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: white;
+            border-radius: 30px;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-magnificence::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--sunset-orange), var(--elegant-rose), var(--emerald-green));
+        }
+        
+        .event-grid-spectacular {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 35px;
+        }
+        
+        .event-detail-premium {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 20px;
+            var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-detail-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--elegant-rose));
+        }
+        
+        .event-detail-premium:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .event-label-gold {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .event-value-elegant {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+        
+        /* 카운트다운 - 초 화려하게 */
+        .countdown-extravaganza {
+            background: linear-gradient(135deg, rgba(80, 200, 120, 0.1), rgba(80, 200, 120, 0.2));
+            border-radius: 25px;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+            border: 3px solid var(--emerald-green);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-extravaganza::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: countdownShimmer 2s linear infinite;
+        }
+        
+        @keyframes countdownShimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .countdown-title-royal {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.8rem;
+            color: var(--emerald-green);
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .countdown-display-supreme {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .countdown-unit-deluxe {
+            background: linear-gradient(135deg, var(--emerald-green), #20c997, #17a2b8);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 20px;
+            text-align: center;
+            min-width: 100px;
+            box-shadow: 
+                0 15px 35px rgba(80, 200, 120, 0.4),
+                inset 0 2px 0 rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            transform: perspective(1000px) rotateX(10deg);
+        }
+        
+        .countdown-unit-deluxe:hover {
+            transform: perspective(1000px) rotateX(0deg) scale(1.1);
+            box-shadow: 
+                0 25px 50px rgba(80, 200, 120, 0.6),
+                inset 0 2px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .countdown-number-massive {
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: block;
+            line-height: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .countdown-label-elegant {
+            font-size: 1rem;
+            opacity: 0.95;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+        
+        /* 지도 섹션 - 최고급 */
+        .map-masterpiece {
+            grid-column: 1 / -1;
+            background: var(--gradient-card);
+            border-radius: 30px;
+            padding: 50px;
+            margin-top: 30px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-masterpiece::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--royal-purple), var(--elegant-rose), var(--sunset-orange));
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .map-header-royal {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(90deg, var(--royal-purple), var(--elegant-rose)) border-box;
+        }
+        
+        .map-container-premium {
+            width: 100%;
+            height: 500px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.2),
+                inset 0 0 0 3px var(--primary-gold);
+            position: relative;
+            background: #f8f9fa;
+        }
+        
+        #map {
+            width: 100%;
+            height: 100%;
+            border-radius: 22px;
+        }
+        
+        /* 축하 메시지 - 최고 화려함 */
+        .celebration-symphony {
+            background: linear-gradient(135deg, rgba(255, 243, 205, 0.95), rgba(254, 247, 224, 0.9));
+            border: 4px solid var(--primary-gold);
+            border-style: double;
+            border-radius: 30px;
+            padding: 60px 50px;
+            margin: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.15),
+                inset 0 2px 0 rgba(255, 255, 255, 0.8);
+        }
+        
+        .celebration-symphony::before,
+        .celebration-symphony::after {
+            content: '🎊';
+            position: absolute;
+            font-size: 4rem;
+            animation: celebrationFloat 4s ease-in-out infinite;
+        }
+        
+        .celebration-symphony::before {
+            top: 20px;
+            left: 30px;
+            animation-delay: 0s;
+        }
+        
+        .celebration-symphony::after {
+            top: 20px;
+            right: 30px;
+            animation-delay: 2s;
+        }
+        
+        @keyframes celebrationFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(10deg); }
+            50% { transform: translateY(-10px) rotate(-5deg); }
+            75% { transform: translateY(-20px) rotate(15deg); }
+        }
+        
+        .message-title-grand {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 2.5rem;
+            color: var(--deep-gold);
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .message-content-elegant {
+            font-size: 1.3rem;
+            line-height: 2;
+            color: #8b4513;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .dress-code-royal {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--midnight-blue);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .invitation-masterpiece {
+                margin: 10px;
+                border-radius: 25px;
+            }
+            
+            .hero-spectacle {
+                padding: 50px 25px;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .main-universe {
+                grid-template-columns: 1fr;
+                padding: 40px 25px;
+                gap: 30px;
+            }
+            
+            .luxury-card {
+                padding: 30px 25px;
+            }
+            
+            .event-grid-spectacular {
+                grid-template-columns: 1fr;
+            }
+            
+            .countdown-display-supreme {
+                gap: 15px;
+            }
+            
+            .countdown-unit-deluxe {
+                min-width: 80px;
+                padding: 15px 20px;
+            }
+            
+            .celebration-symphony {
+                margin: 25px;
+                padding: 40px 30px;
+            }
+            
+            .map-container-premium {
+                height: 350px;
+            }
+        }
+        
+        /* 스크롤 애니메이션 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+</head>
+<body>
+    <!-- 파티클 배경 효과 -->
+    <div class="particles" id="particles"></div>
+    
+    <div class="invitation-masterpiece">
+        <div class="hero-spectacle">
+            <div class="hero-ornament">🌸✨🌸</div>
+            <h1 class="hero-title">환갑잔치</h1>
+            <p class="hero-subtitle">Diamond Jubilee Celebration</p>
+            <div class="hero-year">1965년생 ✦ 환갑</div>
+        </div>
+        
+        <div class="main-universe">
+            <div class="luxury-card fade-in">
+                <div class="card-header-deluxe">
+                    <div class="card-icon-premium">👨‍👩‍👧‍👦</div>
+                    <h3 class="card-title-royal">최일식님 댁</h3>
+                </div>
+                
+                <div class="honoree-showcase">
+                    <div class="honoree-name-gold">
+                        🎂 최일식 님
+                    </div>
+                    <div class="honoree-details-elegant">환갑을 맞으신 존경하는 가장</div>
+                </div>
+                
+                <div class="family-constellation">
+                    <div class="family-member-deluxe">김민주 님 (영원한 동반자)</div>
+                    <div class="family-member-deluxe">최희슬 님 (사랑하는 따님)</div>
+                    <div class="family-member-deluxe">최희도 님 (든든한 아드님)</div>
+                </div>
+            </div>
+            
+            <div class="luxury-card fade-in">
+                <div class="card-header-deluxe">
+                    <div class="card-icon-premium">👨‍👩‍👧‍👦</div>
+                    <h3 class="card-title-royal">김나연님 댁</h3>
+                </div>
+                
+                <div class="honoree-showcase">
+                    <div class="honoree-name-gold">
+                        🎂 김나연 님
+                    </div>
+                    <div class="honoree-details-elegant">환갑을 맞으신 자애로운 어머님</div>
+                </div>
+                
+                <div class="family-constellation">
+                    <div class="family-member-deluxe">박준석 님 (자랑스러운 장남)</div>
+                    <div class="family-member-deluxe">박휘서 님 (사랑하는 차남)</div>
+                </div>
+            </div>
+            
+            <div class="luxury-card event-magnificence fade-in">
+                <div class="card-header-deluxe">
+                    <div class="card-icon-premium">📅</div>
+                    <h3 class="card-title-royal">잔치 안내</h3>
+                </div>
+                
+                <div class="event-grid-spectacular">
+                    <div class="event-detail-premium">
+                        <strong class="event-label-gold">📅 일시</strong>
+                        <div class="event-value-elegant">2024년 9월 6일 (토요일)<br>오후 12시 30분</div>
+                    </div>
+                    <div class="event-detail-premium">
+                        <strong class="event-label-gold">🏢 장소</strong>
+                        <div class="event-value-elegant">팔진향 방이점<br>경복궁빌딩 5층</div>
+                    </div>
+                    <div class="event-detail-premium">
+                        <strong class="event-label-gold">📍 주소</strong>
+                        <div class="event-value-elegant">서울 송파구 올림픽로 348</div>
+                    </div>
+                    <div class="event-detail-premium">
+                        <strong class="event-label-gold">🚇 교통</strong>
+                        <div class="event-value-elegant">지하철 8호선 몽촌토성역<br>2번 출구 도보 5분</div>
+                    </div>
+                </div>
+                
+                <div class="countdown-extravaganza">
+                    <h4 class="countdown-title-royal">🎊 환갑잔치까지</h4>
+                    <div class="countdown-display-supreme" id="countdown">
+                        <div class="countdown-unit-deluxe">
+                            <span class="countdown-number-massive" id="days">--</span>
+                            <span class="countdown-label-elegant">일</span>
+                        </div>
+                        <div class="countdown-unit-deluxe">
+                            <span class="countdown-number-massive" id="hours">--</span>
+                            <span class="countdown-label-elegant">시간</span>
+                        </div>
+                        <div class="countdown-unit-deluxe">
+                            <span class="countdown-number-massive" id="minutes">--</span>
+                            <span class="countdown-label-elegant">분</span>
+                        </div>
+                        <div class="countdown-unit-deluxe">
+                            <span class="countdown-number-massive" id="seconds">--</span>
+                            <span class="countdown-label-elegant">초</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-masterpiece fade-in">
+            <div class="map-header-royal">
+                <div class="card-icon-premium">🗺️</div>
+                <h3 class="card-title-royal">오시는 길</h3>
+            </div>
+            <div class="map-container-premium">
+                <div id="map"></div>
+            </div>
+        </div>
+        
+        <div class="celebration-symphony fade-in">
+            <h3 class="message-title-grand">🎭 초대의 말씀 🎭</h3>
+            <div class="message-content-elegant">
+                60년의 세월을 건강하고 지혜롭게 살아오신<br>
+                두 분의 환갑을 진심으로 축하드리며,<br><br>
+                <strong>가족 여러분과 함께 뜻깊은 시간을 나누고자 합니다.</strong><br><br>
+                바쁘시더라도 귀한 걸음 해주시어<br>
+                자리를 빛내주시면 감사하겠습니다.<br><br>
+                <em style="color: var(--royal-purple); font-size: 1.4rem;">
+                    "인생의 황금기를 맞이하신 두 분께<br>
+                    무궁한 건강과 행복이 함께하시길 기원합니다"
+                </em>
+            </div>
+            <div class="dress-code-royal">
+                👔 복장: 깔끔하고 단정한 차림 &nbsp;|&nbsp; 💝 준비물: 따뜻한 축하 인사와 웃는 얼굴
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 파티클 생성 함수
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                setTimeout(() => {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    
+                    // 랜덤 크기와 위치
+                    const size = Math.random() * 4 + 2;
+                    particle.style.width = size + 'px';
+                    particle.style.height = size + 'px';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 6 + 's';
+                    particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                    
+                    // 랜덤 색상
+                    const colors = ['#ffd700', '#ff69b4', '#663399', '#50c878', '#ff6347'];
+                    particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    particlesContainer.appendChild(particle);
+                    
+                    // 파티클 제거
+                    setTimeout(() => {
+                        if (particle.parentNode) {
+                            particle.parentNode.removeChild(particle);
+                        }
+                    }, 6000);
+                }, i * 100);
+            }
+        }
+        
+        // 지속적으로 파티클 생성
+        setInterval(createParticles, 3000);
+        
+        // 지도 초기화
+        function initializeMap() {
+            // 팔진향 방이점 좌표 (대략적 위치)
+            const lat = 37.5123;
+            const lng = 127.1237;
+            
+            const map = L.map('map').setView([lat, lng], 16);
+            
+            // OpenStreetMap 타일 추가
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            
+            // 커스텀 마커 아이콘
+            const customIcon = L.divIcon({
+                html: `
+                    <div style="
+                        background: linear-gradient(135deg, #ffd700, #ff69b4);
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50% 50% 50% 0;
+                        border: 3px solid white;
+                        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 18px;
+                        color: white;
+                        transform: rotate(-45deg);
+                    ">🍽️</div>
+                `,
+                className: 'custom-marker',
+                iconSize: [40, 40],
+                iconAnchor: [20, 40]
+            });
+            
+            // 마커 추가
+            const marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
+            
+            // 팝업 추가
+            marker.bindPopup(`
+                <div style="
+                    text-align: center;
+                    font-family: 'Noto Sans KR', sans-serif;
+                    padding: 10px;
+                    background: linear-gradient(135deg, #ffd700, #ff69b4);
+                    color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                ">
+                    <h3 style="margin: 0 0 8px 0; font-size: 1.2rem;">🍽️ 팔진향 방이점</h3>
+                    <p style="margin: 0; font-size: 0.9rem;">서울 송파구 올림픽로 348<br>경복궁빌딩 5층</p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.8rem; opacity: 0.9;">📅 9월 6일 오후 12:30</p>
+                </div>
+            `).openPopup();
+            
+            // 지도 스타일링
+            setTimeout(() => {
+                const mapContainer = document.querySelector('.leaflet-container');
+                if (mapContainer) {
+                    mapContainer.style.background = 'linear-gradient(135deg, #f8f9fa, #e9ecef)';
+                }
+            }, 1000);
+        }
+        
+        // 카운트다운 타이머 - 더욱 화려하게
+        function updateCountdown() {
+            const targetDate = new Date('2024-09-06 12:30:00').getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const elements = {
+                days: document.getElementById('days'),
+                hours: document.getElementById('hours'),
+                minutes: document.getElementById('minutes'),
+                seconds: document.getElementById('seconds')
+            };
+
+            if (distance > 0) {
+                const timeLeft = {
+                    days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                    minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                    seconds: Math.floor((distance % (1000 * 60)) / 1000)
+                };
+
+                Object.keys(timeLeft).forEach(key => {
+                    if (elements[key]) {
+                        const currentValue = elements[key].textContent;
+                        const newValue = timeLeft[key].toString().padStart(2, '0');
+                        
+                        if (currentValue !== newValue) {
+                            // 화려한 애니메이션 효과
+                            elements[key].style.transform = 'scale(1.3) rotateY(180deg)';
+                            elements[key].style.background = 'linear-gradient(135deg, #ff6347, #ffd700)';
+                            
+                            setTimeout(() => {
+                                elements[key].textContent = newValue;
+                                elements[key].style.transform = 'scale(1) rotateY(0deg)';
+                                elements[key].style.background = '';
+                            }, 300);
+                        }
+                    }
+                });
+            } else {
+                const countdownSection = document.querySelector('.countdown-extravaganza');
+                countdownSection.innerHTML = `
+                    <div style="
+                        background: linear-gradient(135deg, #ff6347, #ffd700, #ff69b4);
+                        padding: 30px;
+                        border-radius: 20px;
+                        text-align: center;
+                        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+                        animation: celebrationPulse 1s ease-in-out infinite alternate;
+                    ">
+                        <h3 style="
+                            color: white; 
+                            font-size: 2rem; 
+                            margin: 0;
+                            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                        ">
+                            🎉 환갑잔치가 시작되었습니다! 🎉
+                        </h3>
+                    </div>
+                `;
+                
+                // 축하 애니메이션 추가
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes celebrationPulse {
+                        from { transform: scale(1); }
+                        to { transform: scale(1.05); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+        
+        // 스크롤 애니메이션
+        function handleScrollAnimations() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // 고급 인터랙션 효과
+        function initializeInteractions() {
+            // 카드 3D 효과
+            const cards = document.querySelectorAll('.luxury-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const percentX = (x - centerX) / centerX;
+                    const percentY = (y - centerY) / centerY;
+                    
+                    this.style.transform = `
+                        perspective(1000px) 
+                        rotateY(${percentX * 10}deg) 
+                        rotateX(${percentY * -10}deg) 
+                        translateY(-10px) 
+                        scale(1.02)
+                    `;
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0px) scale(1)';
+                });
+            });
+            
+            // 가족 구성원 특수 효과
+            const familyMembers = document.querySelectorAll('.family-member-deluxe');
+            familyMembers.forEach((member, index) => {
+                member.addEventListener('mouseenter', function() {
+                    this.style.background = `linear-gradient(135deg, 
+                        ${index % 2 === 0 ? '#ffd700' : '#ff69b4'}, 
+                        rgba(255, 255, 255, 0.9))`;
+                    this.style.color = 'white';
+                    this.style.textShadow = '1px 1px 2px rgba(0,0,0,0.3)';
+                });
+                
+                member.addEventListener('mouseleave', function() {
+                    this.style.background = '';
+                    this.style.color = '';
+                    this.style.textShadow = '';
+                });
+            });
+        }
+        
+        // 초기화 함수
+        document.addEventListener('DOMContentLoaded', function() {
+            // 파티클 효과 시작
+            createParticles();
+            
+            // 지도 초기화
+            setTimeout(initializeMap, 500);
+            
+            // 카운트다운 시작
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            
+            // 스크롤 애니메이션
+            handleScrollAnimations();
+            window.addEventListener('scroll', handleScrollAnimations);
+            
+            // 고급 인터랙션 초기화
+            initializeInteractions();
+            
+            // 페이지 로드 애니메이션
+            setTimeout(() => {
+                const elements = document.querySelectorAll('.fade-in');
+                elements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 200);
+                });
+            }, 300);
+        });
+        
+        // 추가 시각적 효과
+        function addVisualEnhancements() {
+            // 마우스 따라다니는 반짝이 효과
+            let sparkles = [];
+            
+            document.addEventListener('mousemove', function(e) {
+                if (Math.random() > 0.9) {
+                    const sparkle = document.createElement('div');
+                    sparkle.style.cssText = `
+                        position: fixed;
+                        left: ${e.clientX}px;
+                        top: ${e.clientY}px;
+                        width: 4px;
+                        height: 4px;
+                        background: radial-gradient(circle, #ffd700, transparent);
+                        border-radius: 50%;
+                        pointer-events: none;
+                        z-index: 9999;
+                        animation: sparkleFloat 1s ease-out forwards;
+                    `;
+                    
+                    document.body.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        if (sparkle.parentNode) {
+                            sparkle.parentNode.removeChild(sparkle);
+                        }
+                    }, 1000);
+                }
+            });
+            
+            // 스파클 애니메이션 정의
+            const sparkleStyle = document.createElement('style');
+            sparkleStyle.textContent = `
+                @keyframes sparkleFloat {
+                    0% { opacity: 1; transform: scale(0) translateY(0); }
+                    50% { opacity: 0.8; transform: scale(1) translateY(-20px); }
+                    100% { opacity: 0; transform: scale(0) translateY(-40px); }
+                }
+            `;
+            document.head.appendChild(sparkleStyle);
+        }
+        
+        // 시각적 효과 시작
+        setTimeout(addVisualEnhancements, 1000);
+    </script>
+</body>
+</html>
