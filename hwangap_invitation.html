@@ -1612,6 +1612,9 @@
                 
                 <div class="family-constellation">
                     <div class="family-member-deluxe">박준식 님 (자랑스러운 장남)</div>
+                    <div class="family-member-deluxe">구혜림 님 (사랑하는 며느리)</div>
+                    <div class="family-member-deluxe">박채은 님 (예쁜 손녀)</div>
+                    <div class="family-member-deluxe">박찬우 님 (든든한 손자)</div>
                     <div class="family-member-deluxe">박휘서 님 (사랑하는 차남)</div>
                 </div>
             </div>
@@ -1690,54 +1693,6 @@
                         <div class="stat-number" data-target="100">0</div>
                         <div class="stat-label">앞으로의 행복</div>
                         <div class="stat-icon">💝</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- QR 코드 섹션 -->
-            <div class="qr-masterpiece fade-in">
-                <div class="qr-header">
-                    <div class="card-icon-premium">📱</div>
-                    <h3 class="card-title-royal">초대장 공유하기</h3>
-                </div>
-                <div class="qr-container">
-                    <div class="qr-code-display" id="qrCode">
-                        <div class="qr-pattern">
-                            <div class="qr-square"></div>
-                            <div class="qr-square"></div>
-                            <div class="qr-square"></div>
-                            <div class="qr-square"></div>
-                            <div class="qr-square"></div>
-                            <div class="qr-square"></div>
-                            <div class="qr-square"></div>
-                            <div class="qr-square"></div>
-                            <div class="qr-square"></div>
-                        </div>
-                        <div class="qr-center">🌸</div>
-                    </div>
-                    <div class="qr-instructions">
-                        <p>QR 코드를 스캔하여<br>모바일로 초대장을 확인하세요</p>
-                        <div class="url-display" id="currentUrl">현재 페이지 URL</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 디지털 방명록 -->
-            <div class="guestbook-palace fade-in">
-                <div class="guestbook-header">
-                    <div class="card-icon-premium">✍️</div>
-                    <h3 class="card-title-royal">축하 메시지</h3>
-                </div>
-                <div class="guestbook-form">
-                    <input type="text" class="guest-name" placeholder="성함을 입력해주세요" maxlength="20">
-                    <textarea class="guest-message" placeholder="축하 메시지를 남겨주세요..." maxlength="200"></textarea>
-                    <button class="submit-message">💌 메시지 남기기</button>
-                </div>
-                <div class="messages-display" id="messagesDisplay">
-                    <div class="sample-message">
-                        <div class="message-author">김축하</div>
-                        <div class="message-text">환갑을 진심으로 축하드립니다! 건강하고 행복한 나날 되세요! 🎉</div>
-                        <div class="message-time">방금 전</div>
                     </div>
                 </div>
             </div>
@@ -2008,94 +1963,6 @@
             });
         }
         
-        // QR 코드 URL 표시
-        function displayCurrentUrl() {
-            const urlDisplay = document.getElementById('currentUrl');
-            if (urlDisplay) {
-                urlDisplay.textContent = window.location.href;
-            }
-        }
-        
-        // 방명록 기능
-        function initializeGuestbook() {
-            const submitButton = document.querySelector('.submit-message');
-            const nameInput = document.querySelector('.guest-name');
-            const messageInput = document.querySelector('.guest-message');
-            const messagesDisplay = document.getElementById('messagesDisplay');
-            
-            if (!submitButton || !nameInput || !messageInput || !messagesDisplay) {
-                return;
-            }
-            
-            let guestMessages = [
-                {
-                    name: "김축하",
-                    message: "환갑을 진심으로 축하드립니다! 건강하고 행복한 나날 되세요! 🎉",
-                    time: "방금 전"
-                }
-            ];
-            
-            function displayMessages() {
-                messagesDisplay.innerHTML = '';
-                guestMessages.forEach((msg, index) => {
-                    const messageElement = document.createElement('div');
-                    messageElement.className = 'guest-message-item';
-                    messageElement.style.animationDelay = `${index * 0.1}s`;
-                    messageElement.innerHTML = `
-                        <div class="message-author">${msg.name}</div>
-                        <div class="message-text">${msg.message}</div>
-                        <div class="message-time">${msg.time}</div>
-                    `;
-                    messagesDisplay.appendChild(messageElement);
-                });
-            }
-            
-            submitButton.addEventListener('click', function() {
-                const name = nameInput.value.trim();
-                const message = messageInput.value.trim();
-                
-                if (!name || !message) {
-                    alert('성함과 메시지를 모두 입력해주세요!');
-                    return;
-                }
-                
-                const newMessage = {
-                    name: name,
-                    message: message,
-                    time: "방금 전"
-                };
-                
-                guestMessages.unshift(newMessage);
-                
-                if (guestMessages.length > 10) {
-                    guestMessages.pop();
-                }
-                
-                displayMessages();
-                
-                nameInput.value = '';
-                messageInput.value = '';
-                
-                submitButton.textContent = '💌 전송완료!';
-                submitButton.style.background = 'linear-gradient(135deg, #50c878, #20c997)';
-                
-                setTimeout(() => {
-                    submitButton.textContent = '💌 메시지 남기기';
-                    submitButton.style.background = 'linear-gradient(135deg, var(--primary-gold), var(--elegant-rose))';
-                }, 2000);
-            });
-            
-            if (messageInput) {
-                messageInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter' && e.ctrlKey) {
-                        submitButton.click();
-                    }
-                });
-            }
-            
-            displayMessages();
-        }
-        
         // 날씨 애니메이션
         function animateWeather() {
             const weatherIcons = ['☀️', '🌤️', '⛅', '🌈'];
@@ -2126,19 +1993,7 @@
         
         // QR 코드 애니메이션
         function animateQRCode() {
-            const qrSquares = document.querySelectorAll('.qr-square');
-            
-            setInterval(() => {
-                qrSquares.forEach((square, index) => {
-                    setTimeout(() => {
-                        square.style.background = `hsl(${Math.random() * 360}, 70%, 50%)`;
-                        
-                        setTimeout(() => {
-                            square.style.background = 'var(--midnight-blue)';
-                        }, 200);
-                    }, index * 100);
-                });
-            }, 3000);
+            // QR 코드 제거됨
         }
         
         // 스크롤 애니메이션
@@ -2271,8 +2126,6 @@
             window.addEventListener('scroll', handleScrollAnimations);
             initializeInteractions();
             setTimeout(addVisualEnhancements, 1000);
-            displayCurrentUrl();
-            initializeGuestbook();
             handleStatisticsAnimation();
             animateWeather();
             animateQRCode();
